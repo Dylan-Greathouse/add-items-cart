@@ -31,6 +31,14 @@ const xPotion = {
     category: 'healing',
     price: 1200,
 };
+const antidote = {
+    id: 'antidote',
+    name: 'Antidote',
+    image: 'Antidote.PNG',
+    description: 'A salve that helps when one is poisoned. Cures poision status.',
+    category: 'healing',
+    price: 200,
+};
 
 const fireBomb = {
     id: 'fire-bomb',
@@ -49,22 +57,14 @@ const bigFireBomb = {
     price: 300,
 };
 
-const antidote = {
-    id: 'antidote',
-    name: 'Antidote',
-    image: 'Antidote.PNG',
-    description: 'A salve that helps when one is poisoned. Cures poision status.',
-    category: 'healing',
-    price: 200,
-};
 
 const items = [
     potion,
     hiPotion,
     xPotion,
+    antidote,
     fireBomb,
     bigFireBomb,
-    antidote
 ];
 
 export default items;
