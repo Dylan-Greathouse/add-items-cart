@@ -10,7 +10,7 @@ export function renderItems(item){
     const itemSpan = document.createElement('span');
     itemSpan.textContent = `${item.price} munnyz`;
 
-    const itemDescription = document.createElement('span');
+    const itemDescription = document.createElement('h4');
     itemDescription.textContent = `${item.description}`;
 
     const button = document.createElement('button');

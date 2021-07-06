@@ -1,1 +1,32 @@
 /* add home page styles here */
+
+#items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#items li {
+    width: 400px;
+    height:250px;
+    border: 2px dotted gray;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#items li h3{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#items li img {
+    width: 20%;
+    height: 80px;;
+}
+
+#items li span{
+    margin: 10px;
+}
+
+#items li h4{
+    font-weight: bold;
+}
