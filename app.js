@@ -1,7 +1,7 @@
 // import functions and grab DOM elements
 import items from './items.js';
 import { renderItems } from './render-items.js';
-console.log(items);
+// console.log(items);
 
 
 const itemsUl = document.getElementById('items');

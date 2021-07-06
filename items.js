@@ -34,7 +34,7 @@ const xPotion = {
 
 const fireBomb = {
     id: 'fire-bomb',
-    name: 'Fire-bomb',
+    name: 'Fire bomb',
     image: 'Bomb.PNG',
     description: 'Throw the bomb at an enemy to inflict fire damage. Inflicts 500 fire damage to a single target.',
     category: 'damage',
@@ -42,7 +42,7 @@ const fireBomb = {
 };
 const bigFireBomb = {
     id: 'big-fire-bomb',
-    name: 'Big-fire-bomb',
+    name: 'Big fire bomb',
     image: 'Big-bomb.PNG',
     description: 'A bigger explosion than a regular fire bomb. Do not hurt teammates! Inflicts 2000 fire damage to a single target.',
     category: 'damage',
