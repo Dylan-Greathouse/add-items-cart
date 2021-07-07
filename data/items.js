@@ -11,7 +11,7 @@ const potion = {
     image: 'Potion.PNG',
     description: 'A bitter medicine that is used by many adventures. Heals 250 hp.',
     category: 'healing',
-    price: 300,
+    price: 30,
 };
 
 const hiPotion = {
@@ -20,7 +20,7 @@ const hiPotion = {
     image: 'Hi-potion.PNG',
     description: 'A bitter medicine, better than that boring, old potion. Heals 1000 hp.',
     category: 'healing',
-    price: 600,
+    price: 60,
 };
 
 const xPotion = {
@@ -29,7 +29,7 @@ const xPotion = {
     image: 'X-potion.PNG',
     description: "A great potion for long journeys. A perfect potion made from years of research and perfecting the recipe. Can't change that bitter taste though. Heals 2500 hp.",
     category: 'healing',
-    price: 1200,
+    price: 120,
 };
 const antidote = {
     id: 4,
@@ -37,7 +37,7 @@ const antidote = {
     image: 'Antidote.PNG',
     description: 'A salve that helps when one is poisoned. Cures poision status.',
     category: 'healing',
-    price: 200,
+    price: 20,
 };
 
 const fireBomb = {
@@ -46,7 +46,7 @@ const fireBomb = {
     image: 'Bomb.PNG',
     description: 'Throw the bomb at an enemy to inflict fire damage. Inflicts 500 fire damage to a single target.',
     category: 'damage',
-    price: 400,
+    price: 40,
 };
 const bigFireBomb = {
     id: 'big-fire-bomb',
@@ -54,7 +54,7 @@ const bigFireBomb = {
     image: 'Big-bomb.PNG',
     description: 'A bigger explosion than a regular fire bomb. Do not hurt teammates! Inflicts 2000 fire damage to a single target.',
     category: 'damage',
-    price: 300,
+    price: 30,
 };
 
 
