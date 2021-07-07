@@ -58,7 +58,7 @@ const bigFireBomb = {
 };
 
 
-const items = [
+const products = [
     potion,
     hiPotion,
     xPotion,
@@ -67,4 +67,4 @@ const items = [
     bigFireBomb,
 ];
 
-export default items;
+export default products;

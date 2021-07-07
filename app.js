@@ -1,16 +1,17 @@
 // import functions and grab DOM elements
-import items from './data/items.js';
-import { renderItems } from './render-items.js';
+import products from './data/items.js';
+import { renderProducts } from './render-items.js';
 // console.log(items);
 
 
-const itemsUl = document.getElementById('items');
+const productUl = document.getElementById('items');
 // initialize state
 
-for (let item of items) {
-    const itemLi = renderItems(item);
-    itemsUl.appendChild(itemLi);
+for (let item of products) {
+    const productLi = renderProducts(item);
+    productUl.appendChild(productLi);
 }
+
 
 // set event listeners 
   // get user input
