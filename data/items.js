@@ -41,7 +41,7 @@ const antidote = {
 };
 
 const fireBomb = {
-    id: 'fire-bomb',
+    id: 5,
     name: 'Fire bomb',
     image: 'Bomb.PNG',
     description: 'Throw the bomb at an enemy to inflict fire damage. Inflicts 500 fire damage to a single target.',
@@ -49,7 +49,7 @@ const fireBomb = {
     price: 40,
 };
 const bigFireBomb = {
-    id: 'big-fire-bomb',
+    id: 6,
     name: 'Big fire bomb',
     image: 'Big-bomb.PNG',
     description: 'A bigger explosion than a regular fire bomb. Do not hurt teammates! Inflicts 2000 fire damage to a single target.',

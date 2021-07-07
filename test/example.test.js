@@ -1,6 +1,9 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { renderItems } from '../render-items.js';
+
+import { findById, getTotal, renderTableRow } from '../utils.js';
+import products from '../data/items.js';
+import { renderProducts } from '../render-items.js';
 
 const test = QUnit.test;
 
@@ -20,7 +23,7 @@ test('Is this a Potion?', (expect) => {
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = renderItems(potion);
+    const actual = renderProducts(potion);
 
     //Expect
     // Make assertions about what is expected versus the actual result
@@ -45,7 +48,7 @@ test('Is this a Hi potion?', (expect) => {
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = renderItems(hiPotion);
+    const actual = renderProducts(hiPotion);
 
     //Expect
     // Make assertions about what is expected versus the actual result
@@ -69,7 +72,7 @@ test('Is this a X potion?', (expect) => {
    
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = renderItems(xPotion);
+    const actual = renderProducts(xPotion);
 
     //Expect
     // Make assertions about what is expected versus the actual result
@@ -92,11 +95,25 @@ test('Is this a Fire bomb?', (expect) => {
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = renderItems(fireBomb);
+    const actual = renderProducts(fireBomb);
 
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
 });
 
+test('Does findById function return passing', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const products = [{ id: 1, name: 'Potion' }, { id: 2, name: 'Hi-potion' }];
+    const expected = { id: 1, name: 'Potion' };
+    
 
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = findById(products, 1);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
+});
