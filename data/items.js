@@ -6,7 +6,7 @@
 
 
 const potion = {
-    id: 'potion',
+    id: 1,
     name: 'Potion',
     image: 'Potion.PNG',
     description: 'A bitter medicine that is used by many adventures. Heals 250 hp.',
@@ -15,7 +15,7 @@ const potion = {
 };
 
 const hiPotion = {
-    id: 'hi-potion',
+    id: 2,
     name: 'Hi-potion',
     image: 'Hi-potion.PNG',
     description: 'A bitter medicine, better than that boring, old potion. Heals 1000 hp.',
@@ -24,7 +24,7 @@ const hiPotion = {
 };
 
 const xPotion = {
-    id: 'x-potion',
+    id: 3,
     name: 'X-potion',
     image: 'X-potion.PNG',
     description: "A great potion for long journeys. A perfect potion made from years of research and perfecting the recipe. Can't change that bitter taste though. Heals 2500 hp.",
@@ -32,7 +32,7 @@ const xPotion = {
     price: 1200,
 };
 const antidote = {
-    id: 'antidote',
+    id: 4,
     name: 'Antidote',
     image: 'Antidote.PNG',
     description: 'A salve that helps when one is poisoned. Cures poision status.',

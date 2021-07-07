@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import items from './items.js';
+import items from './data/items.js';
 import { renderItems } from './render-items.js';
 // console.log(items);
 
