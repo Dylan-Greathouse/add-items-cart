@@ -15,13 +15,7 @@ export function toMunnyz(number) {
 }
 
 export function renderTableRow(productItem, cartItem){
-    // return <tr> element with all the info we need
-    // <tr>
-    //     <td>Apple</td>  
-    //     <td>$1.00 (from fruits.js)</td>
-    //     <td>2 (from cart.js)</td>
-    //     <td>$4.00 (calculated)</td>
-    // </tr>
+  
     const tr = document.createElement('tr');
     const tdName = document.createElement('td');
     tdName.textContent = productItem.name;
@@ -46,10 +40,7 @@ export function renderTableRow(productItem, cartItem){
 
 export function getTotal(products, cart){
     let orderTotal = 0;
-    // // loop through the cart items
-    // // get the associated fruit
-    // // sum up the qty * price
-    // // return the orderTotal
+  
     for (let item of cart) {
         const product = findById(products, item.id);
         orderTotal += product.price * item.qty;

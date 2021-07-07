@@ -102,7 +102,7 @@ test('Is this a Fire bomb?', (expect) => {
     expect.equal(actual.outerHTML, expected);
 });
 
-test('Does findById function return passing', (expect) => {
+test('Does product ID return?', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const products = [{ id: 1, name: 'Potion' }, { id: 2, name: 'Hi-potion' }];
@@ -116,4 +116,58 @@ test('Does findById function return passing', (expect) => {
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual, expected);
+});
+
+test('returns fruits by id', expect => {
+    const expected = {
+        id: 6,
+        name: 'Big fire bomb',
+        image: 'Big-bomb.PNG',
+        description: 'A bigger explosion than a regular fire bomb. Do not hurt teammates! Inflicts 2000 fire damage to a single target.',
+        category: 'damage',
+        price: 30,
+    };
+    const actual = findById(products, 6);
+
+    expect.deepEqual(actual, expected);
+});
+
+test('renderTableRow returns a <tr> element', expect => {
+    const potion = {
+        id: 1,
+        name: 'Potion',
+        image: 'Potion.PNG',
+        description: 'A bitter medicine that is used by many adventures. Heals 250 hp.',
+        category: 'healing',
+        price: 30,
+    };
+    const potionCart = {
+        id: 1,
+        qty: 2
+    };
+    const expected = `<tr><td>Potion</td><td>60 Munnyz</td><td>2</td><td>120 Munnyz</td></tr>`;
+    const dom = renderTableRow(potion, potionCart);
+    const html = dom.outerHTML;
+    expect.equal(html, expected);
+});
+
+
+
+test('Does getTotal return the whole total?', expect=>{
+    const cart = [
+        { id: 1, qty: 4 },
+        { id: 2, qty: 6 }
+    ];
+    const data = [{
+        id: 1,
+        price: 30
+    },
+    {
+        id: 2, 
+        price: 60
+    }];
+
+    const expected = 480;
+    const actual = getTotal(data, cart);
+    expect.equal(expected, actual);
 });
