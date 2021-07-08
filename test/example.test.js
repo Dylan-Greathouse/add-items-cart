@@ -10,7 +10,7 @@ const test = QUnit.test;
 test('Is this a Potion?', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<li><h3>Potion</h3><img src="./assets/Potion.PNG" alt="Potion"><span>300 munnyz</span><h4>A bitter medicine that is used by many adventures. Heals 250 hp.</h4><button>Buy</button></li>`;
+    const expected = `<li><h3>Potion</h3><img src="./assets/Potion.PNG" alt="Potion"><span>30 munnyz</span><h4>A bitter medicine that is used by many adventures. Heals 250 hp.</h4><button>Buy</button></li>`;
     
     const potion = {
         id: 'potion',
@@ -18,7 +18,7 @@ test('Is this a Potion?', (expect) => {
         image: 'Potion.PNG',
         description: 'A bitter medicine that is used by many adventures. Heals 250 hp.',
         category: 'healing',
-        price: 300,
+        price: 30,
     };
 
     //Act 
@@ -33,7 +33,7 @@ test('Is this a Potion?', (expect) => {
 test('Is this a Hi potion?', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<li><h3>Hi-potion</h3><img src="./assets/Hi-potion.PNG" alt="Hi-potion"><span>600 munnyz</span><h4>A bitter medicine, better than that boring, old potion. Heals 1000 hp.</h4><button>Buy</button></li>`;
+    const expected = `<li><h3>Hi-potion</h3><img src="./assets/Hi-potion.PNG" alt="Hi-potion"><span>60 munnyz</span><h4>A bitter medicine, better than that boring, old potion. Heals 1000 hp.</h4><button>Buy</button></li>`;
     
 
     const hiPotion = {
@@ -42,7 +42,7 @@ test('Is this a Hi potion?', (expect) => {
         image: 'Hi-potion.PNG',
         description: 'A bitter medicine, better than that boring, old potion. Heals 1000 hp.',
         category: 'healing',
-        price: 600,
+        price: 60,
     };
    
 
@@ -58,7 +58,7 @@ test('Is this a Hi potion?', (expect) => {
 test('Is this a X potion?', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<li><h3>X-potion</h3><img src="./assets/X-potion.PNG" alt="X-potion"><span>1200 munnyz</span><h4>A great potion for long journeys. A perfect potion made from years of research and perfecting the recipe. Can't change that bitter taste though. Heals 2500 hp.</h4><button>Buy</button></li>`;
+    const expected = `<li><h3>X-potion</h3><img src="./assets/X-potion.PNG" alt="X-potion"><span>120 munnyz</span><h4>A great potion for long journeys. A perfect potion made from years of research and perfecting the recipe. Can't change that bitter taste though. Heals 2500 hp.</h4><button>Buy</button></li>`;
     
 
     const xPotion = {
@@ -67,7 +67,7 @@ test('Is this a X potion?', (expect) => {
         image: 'X-potion.PNG',
         description: "A great potion for long journeys. A perfect potion made from years of research and perfecting the recipe. Can't change that bitter taste though. Heals 2500 hp.",
         category: 'healing',
-        price: 1200,
+        price: 120,
     };
    
     //Act 
@@ -82,7 +82,7 @@ test('Is this a X potion?', (expect) => {
 test('Is this a Fire bomb?', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<li><h3>Fire bomb</h3><img src="./assets/Bomb.PNG" alt="Fire bomb"><span>400 munnyz</span><h4>Throw the bomb at an enemy to inflict fire damage. Inflicts 500 fire damage to a single target.</h4><button>Buy</button></li>`;
+    const expected = `<li><h3>Fire bomb</h3><img src="./assets/Bomb.PNG" alt="Fire bomb"><span>40 munnyz</span><h4>Throw the bomb at an enemy to inflict fire damage. Inflicts 500 fire damage to a single target.</h4><button>Buy</button></li>`;
     
     const fireBomb = {
         id: 'fire-bomb',
@@ -90,7 +90,7 @@ test('Is this a Fire bomb?', (expect) => {
         image: 'Bomb.PNG',
         description: 'Throw the bomb at an enemy to inflict fire damage. Inflicts 500 fire damage to a single target.',
         category: 'damage',
-        price: 400,
+        price: 40,
     };
     
     //Act 
@@ -100,22 +100,6 @@ test('Is this a Fire bomb?', (expect) => {
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
-});
-
-test('Does product ID return?', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const products = [{ id: 1, name: 'Potion' }, { id: 2, name: 'Hi-potion' }];
-    const expected = { id: 1, name: 'Potion' };
-    
-
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = findById(products, 1);
-
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.deepEqual(actual, expected);
 });
 
 test('returns fruits by id', expect => {
@@ -147,10 +131,25 @@ test('renderTableRow returns a <tr> element', expect => {
     };
     const expected = `<tr><td>Potion</td><td>60 Munnyz</td><td>2</td><td>120 Munnyz</td></tr>`;
     const dom = renderTableRow(potion, potionCart);
-    const html = dom.outerHTML;
-    expect.equal(html, expected);
+    const actual = dom.outerHTML;
+    expect.equal(actual, expected);
 });
 
+test('Does getTotal return the total?', expect=>{
+    const products = [{
+        id: 1,
+        name: 'Potion',
+        image: 'Potion.PNG',
+        description: 'A bitter medicine that is used by many adventures. Heals 250 hp.',
+        category: 'healing',
+        price: 30,
+    }];
+    const cart = [{ id: 1, qty: 2 }];
+
+    const expected = 60;
+    const actual = getTotal(products, cart);
+    expect.equal(expected, actual);
+});
 
 
 test('Does getTotal return the whole total?', expect=>{
@@ -168,6 +167,19 @@ test('Does getTotal return the whole total?', expect=>{
     }];
 
     const expected = 480;
+    const actual = getTotal(data, cart);
+    expect.equal(expected, actual);
+});
+
+test('Does getTotal return the whole total?-redone', expect=>{
+    const cart = [
+        { id: 1, qty: 4 }];
+    const data = [{
+        id: 1,
+        price: 30
+    }];
+
+    const expected = 120;
     const actual = getTotal(data, cart);
     expect.equal(expected, actual);
 });
