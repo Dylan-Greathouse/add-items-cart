@@ -1,6 +1,7 @@
 import products from '../data/items.js';
 import cart from '../data/cart.js';
-import { toMunnyz, getTotal, renderTableRow, findById } from '../utils.js';
+import { toMunnyz, getTotal, findById } from '../utils.js';
+import { renderTableRow } from './render-table-row.js';
 
 const tableBody = document.getElementById('table-body');
 
