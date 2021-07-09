@@ -10,7 +10,7 @@ export function findById(items, id){
 }
 
 export function toMunnyz(number) {
-    const munnzyXchg = 2.0;
+    const munnzyXchg = 1.0;
     return `${number * munnzyXchg} Munnyz`;
 }
 
