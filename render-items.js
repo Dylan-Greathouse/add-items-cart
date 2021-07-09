@@ -15,6 +15,8 @@ export function renderProducts(product){
 
     const button = document.createElement('button');
     button.textContent = 'Buy';
+    button.value = product.id;
+    button.classList.add('add');
 
     productLi.appendChild(producth3);
     productLi.appendChild(productImg);

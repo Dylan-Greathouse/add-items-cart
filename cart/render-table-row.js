@@ -1,6 +1,7 @@
 import { toMunnyz } from '../utils.js';
 // render table row function
 export function renderTableRow(productItem, cartItem){
+   
     const tr = document.createElement('tr');
     const tdName = document.createElement('td');
     tdName.textContent = productItem.name;

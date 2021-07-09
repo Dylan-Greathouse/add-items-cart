@@ -3,21 +3,22 @@ import { findById } from './utils.js';
 export const CART = 'MERCHANT_CART';
 
 
-export function getcart(){
+export function getCart(){
     let stringCart = localStorage.getItem(CART) || '[]';
 
     const cart = JSON.parse(stringCart);
     return cart;
 }
 
-export function addItemToCart(itemId){
+export function addItemToCart(productId){
     const cart = getCart();
-    const item = findById(cart, itemId);
+    const item = findById(cart, productId);
 
     if (item) {
         item.qty += 1;
+
     } else {
-        const newItem = { id: itemId, qty: 1 };
+        const newItem = { id: productId, qty: 1 };
         cart.push(newItem);
     }
     localStorage.setItem(CART, JSON.stringify(cart));
