@@ -18,11 +18,17 @@ export function renderProducts(product){
     button.value = product.id;
     button.classList.add('add');
 
+    const productQty = document.createElement('h5');
+    productQty.textContent = 0;
+    productQty.classList.add('qty');
+    productQty.id = product.id;
+
     productLi.appendChild(producth3);
     productLi.appendChild(productImg);
     productLi.appendChild(productSpan);
     productLi.appendChild(productDescription);
     productLi.appendChild(button);
+    productLi.appendChild(productQty);
 
     return productLi;
 }

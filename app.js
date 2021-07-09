@@ -20,12 +20,24 @@ for (let product of products) {
   // use user input to update state 
   // update DOM to reflect the new state
 const addButtons = document.querySelectorAll('.add');
+const productQty = document.getElementsByClassName('qty');
 for (let btn of addButtons) {
-    btn.addEventListener('click', (e)=>{
-        console.log('i am clicking button', e.target.value);
-        console.log(typeof(e.target.value));
-          // e.target.value is a string, we need our IDs to be numbers
-        addItemToCart(Number(e.target.value));
+    btn.addEventListener('click', ()=>{
+     
+        addItemToCart(Number(btn.value));
+        
+        for (let i = 0; i < productQty.length; i++) {
+          
+            if (Number(productQty[i].id) === Number(btn.value)) {
+                productQty[i].textContent = Number(productQty[i].textContent) + 1;
+            
+            }
+        }
+
+
     });
 }
-  
+
+
+
+// button value compared to qty value.
