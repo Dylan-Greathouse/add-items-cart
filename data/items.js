@@ -40,8 +40,17 @@ const antidote = {
     price: 20,
 };
 
-const fireBomb = {
+const elixer = {
     id: 5,
+    name: 'Elixer',
+    image: 'elixer.PNG',
+    description: 'A magical potion that can bring anything back from the brink of death. Cures fainted status.',
+    category: 'healing',
+    price: 20,
+};
+
+const fireBomb = {
+    id: 6,
     name: 'Fire bomb',
     image: 'Bomb.PNG',
     description: 'Throw the bomb at an enemy to inflict fire damage. Inflicts 500 fire damage to a single target.',
@@ -49,7 +58,7 @@ const fireBomb = {
     price: 40,
 };
 const bigFireBomb = {
-    id: 6,
+    id: 7,
     name: 'Big fire bomb',
     image: 'Big-bomb.PNG',
     description: 'A bigger explosion than a regular fire bomb. Do not hurt teammates! Inflicts 2000 fire damage to a single target.',
@@ -57,14 +66,36 @@ const bigFireBomb = {
     price: 30,
 };
 
+const holyWater = {
+    id: 8,
+    name: 'Holy Water',
+    image: 'Holy-water.PNG',
+    description: 'Water that has been blessed by a priest, but it looks just like normal water... Inflicts wet status.',
+    category: 'status',
+    price: 20,
+};
+
+const poisonDart = {
+    id: 9,
+    name: 'Posion Dart',
+    image: 'poison-dart.PNG',
+    description: "A dart dipped in poison. Better watch out and don't get cut! Inflicts poison status.",
+    category: 'status',
+    price: 20,
+};
+
+
 
 const products = [
     potion,
     hiPotion,
     xPotion,
     antidote,
+    elixer,
     fireBomb,
     bigFireBomb,
+    holyWater,
+    poisonDart
 ];
 
 export default products;

@@ -6,19 +6,24 @@
   }
   
   a{
-      background-color: darkorchid;
+      background-color: rgba(171, 192, 57, 0.414);
       color: ghostwhite;
-      border: 2px solid blue;
+      text-decoration: none;
+      border: 2px solid rgb(0, 0, 0);
+      margin: 5px;
+      font-size: larger;
+      border-radius: 5px;
   }
+
 
 table {
     border-collapse: collapse;
     border: 3px solid black;
-    background-color: cornsilk;
+    background-color: rgba(224, 215, 215, 0.627);
     
 }
 thead {
-    background-color: blue;
+    background-color: rgba(169, 86, 18, 0.565);
     font-weight: 700;
 }
 table th, table td {
