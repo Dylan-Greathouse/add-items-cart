@@ -1,4 +1,46 @@
 /* add home page styles here */
+html {
+    background-image: url('../assets/735e5da3c5a46564cb9b3df94b785c20.jpg');
+    background-repeat: no-repeat;
+      background-size: cover;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: cornsilk;
+}
+
+ul {
+    justify-content: center;
+    align-items: center;
+    
+}
+
+li {
+    background-color: rgba(190, 166, 104, 0.655);
+    justify-content: space-between;
+}
+
+span {
+    font-size: 20px;
+}
+
+a{
+    background-color: rgba(195, 119, 19, 0.772);
+    color: ghostwhite;
+    text-decoration: none;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 5px;
+    font-size: 30px;
+    border-radius: 5px;
+    display: flex;
+    padding: 20px;
+    margin: 20px 600px;
+    justify-content: center;
+    align-items: center;
+}
+
 
 #items {
     display: flex;
@@ -8,9 +50,9 @@
 #items li {
     width: 400px;
     height:250px;
-    border: 2px dotted gray;
+    border: 5px dotted rgb(195, 194, 194);
     padding: 10px;
-    margin-top: 10px;
+    
 }
 
 #items li h3{
@@ -29,4 +71,14 @@
 
 #items li h4{
     font-weight: bold;
+    font-size: 15px;
+}
+
+h5 {
+font-size: 30px;
+color: black ;
+}
+
+button {
+    margin: 5px;
 }

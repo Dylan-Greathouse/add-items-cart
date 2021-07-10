@@ -1,26 +1,34 @@
-export function renderItems(item){
-    const itemLi = document.createElement('li');
-    const itemh3 = document.createElement('h3');
-    itemh3.textContent = item.name;
+export function renderProducts(product){
+    const productLi = document.createElement('li');
+    const producth3 = document.createElement('h3');
+    producth3.textContent = product.name;
 
-    const itemImg = document.createElement('img');
-    itemImg.src = `./assets/${item.image}`;
-    itemImg.alt = item.name;
+    const productImg = document.createElement('img');
+    productImg.src = `./assets/${product.image}`;
+    productImg.alt = product.name;
 
-    const itemSpan = document.createElement('span');
-    itemSpan.textContent = `${item.price} munnyz`;
+    const productSpan = document.createElement('span');
+    productSpan.textContent = `${product.price} munnyz`;
 
-    const itemDescription = document.createElement('h4');
-    itemDescription.textContent = `${item.description}`;
+    const productDescription = document.createElement('h4');
+    productDescription.textContent = `${product.description}`;
 
     const button = document.createElement('button');
     button.textContent = 'Buy';
+    button.value = product.id;
+    button.classList.add('add');
 
-    itemLi.appendChild(itemh3);
-    itemLi.appendChild(itemImg);
-    itemLi.appendChild(itemSpan);
-    itemLi.appendChild(itemDescription);
-    itemLi.appendChild(button);
+    const productQty = document.createElement('h5');
+    productQty.textContent = 0;
+    productQty.classList.add('qty');
+    productQty.id = product.id;
 
-    return itemLi;
+    productLi.appendChild(producth3);
+    productLi.appendChild(productImg);
+    productLi.appendChild(productSpan);
+    productLi.appendChild(productDescription);
+    productLi.appendChild(button);
+    productLi.appendChild(productQty);
+
+    return productLi;
 }
