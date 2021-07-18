@@ -1,6 +1,7 @@
 import { findById } from './utils.js';
 
 export const CART = 'MERCHANT_CART';
+export const SELLER = 'SELLER';
 
 
 export function getCart(){
